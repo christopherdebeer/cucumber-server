@@ -5,8 +5,7 @@ FROM greglearns/ruby
 MAINTAINER Christopher de Beer "christopherdebeer@gmail.com"
 
 RUN gem install bundler
-RUN gem install cucumber
-RUN gem install sinatra
+RUN bundle install
 
 EXPOSE 4000
 

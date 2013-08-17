@@ -1,0 +1,18 @@
+<html>
+  <head>
+    <title><%= title %></title>
+  </head>
+  <body>
+    <h1><a href="/" ><%= title %></a></h1>
+    <ul>
+      <li><a href="/post/create">New Post</a></li>
+    </ul>
+    <% if flash[:notice] %>
+      <p class="alert alert-success"><%= flash[:notice] %></p>
+    <% end %>
+    <% if flash[:error] %>
+      <p class="alert alert-error"><%= flash[:error] %></p>
+    <% end %>
+    <%= yield %>
+  </body>
+</html>
